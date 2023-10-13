@@ -127,32 +127,49 @@ class _ProductScreenState extends State<ProductScreen> {
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
-                                                          const Spacer(),
-                                                          Row(
-                                                            children: [
-                                                              const Icon(
-                                                                  Icons.star,
-                                                                  color: Colors
-                                                                      .yellow),
-                                                              Text(
-                                                                  '${item.rating}'),
-                                                            ],
-                                                          ),
-                                                          const SizedBox(
-                                                              width: 10),
-                                                          Row(
-                                                            children: [
-                                                              const Icon(
-                                                                  Icons
-                                                                      .local_offer,
-                                                                  color: Colors
-                                                                      .green),
-                                                              Text(
-                                                                  '${item.discountPercentage!}'),
-                                                            ],
-                                                          ),
+                                                          // const Spacer(),
                                                         ],
-                                                      )
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Align(
+                                                            alignment: Alignment
+                                                                .bottomLeft,
+                                                            child: Wrap(
+                                                              children: [
+                                                                const Icon(
+                                                                    Icons.star,
+                                                                    color: Colors
+                                                                        .yellow),
+                                                                Text(
+                                                                    '${item.rating}'),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          Align(
+                                                            // alignment: Alignment
+                                                            //     .bottomRight,
+                                                            child: Wrap(
+                                                              alignment:
+                                                                  WrapAlignment
+                                                                      .start,
+                                                              children: [
+                                                                const Icon(
+                                                                    Icons
+                                                                        .local_offer,
+                                                                    color: Colors
+                                                                        .green),
+                                                                Text(
+                                                                    '${item.discountPercentage!}'),
+                                                              ],
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                      const SizedBox(width: 10),
                                                     ],
                                                   ),
                                                 ],
